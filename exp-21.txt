@@ -1,0 +1,11 @@
+import pandas as pd
+
+data = {'Column1': ['Apple', 'banana', 'ORANGE', 'Grape', 'Kiwi']}
+df = pd.DataFrame(data)
+
+char_column = 'Column1'
+
+df[char_column] = df[char_column].str.swapcase()
+
+print("DataFrame after swapping cases of '{}':".format(char_column))
+print(df)

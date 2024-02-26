@@ -1,0 +1,12 @@
+import pandas as pd
+
+data = {'Column1': ['apple', 'banana', 'orange', 'grape', 'kiwi']}
+df = pd.DataFrame(data)
+
+substring = 'an'
+
+
+indices = df[df['Column1'].str.contains(substring, na=False)].index
+
+print("Indices of rows where '{}' is present in 'Column1':".format(substring))
+print(indices)
